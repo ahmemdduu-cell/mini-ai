@@ -1,9 +1,4 @@
 buildscript {
-    ext {
-        minSdkVersion = 26
-        compileSdkVersion = 34
-        targetSdkVersion = 34
-    }
     repositories {
         google()
         mavenCentral()
@@ -23,8 +18,8 @@ allprojects {
 apply plugin: 'com.android.application'
 
 android {
-    namespace "com.mini.app"
     compileSdk 34
+    namespace "com.mini.app"
 
     defaultConfig {
         applicationId "com.mini.app"
@@ -35,9 +30,6 @@ android {
     }
 
     buildTypes {
-        debug {
-            debuggable true
-        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -46,6 +38,5 @@ android {
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'androidx.appcompat:appcompat:1.6.1'
 }
